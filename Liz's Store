@@ -1,0 +1,31 @@
+CREATE TABLE LIZ_STORE (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, style TEXT, price INTEGER, sizes TEXT);
+
+INSERT INTO LIZ_STORE VALUES(1, "BLOUSES", 30, "tanks,croptops,floral", 10, "SMALL-LARGE");
+INSERT INTO LIZ_STORE VALUES(2, "PANTS", 60, "STRAIGHT_FIT", 25, "MEDIUM_XLARGE");
+INSERT INTO LIZ_STORE VALUES(3, "SOCKS", 80, "TUBE_SOCKS", 5, "ONESIZEFITSALL");
+INSERT INTO LIZ_STORE VALUES(4, "JEANS", 50, "STRAIGH_FIT", 40, "ZERO_EIGHTEEN");
+INSERT INTO LIZ_STORE VALUES(5, "UNDERGARMENTS", 150, "BRAS,UNDERWEAR", 15, "ONESIZEFITSALL");
+INSERT INTO LIZ_STORE VALUES(6, "MENS_UNDERGARMENTS", 100, "BOXER_BRIEFS", 20, "ONESIZEFITSMOST");
+INSERT INTO LIZ_STORE VALUES(7, "MENS HATS", 30, "BUCKET_HAT", 35, "MENS_LARGE");
+INSERT INTO LIZ_STORE VALUES(8, "SKIRTS", 100, "PENCIL SKIRTS", 35, "SMALL-LARGE");
+INSERT INTO LIZ_STORE VALUES(9, "DRESSES", 300, "SUMMER, CASUAL, COCKTAIL", 20, "SMALL-LARGE");
+INSERT INTO LIZ_STORE VALUES(10, "OUTERWEAR", 300, "BLAZERS, JACKETS, PUFFERS, BOMBERS", 80, "X_SMALL_LARGE");
+INSERT INTO LIZ_STORE VALUES(11, "ACCESORIES", 50, "scarves, beanies, earmuffs, gloves, mittens", 10, "ONESIZEFITSALL");
+INSERT INTO LIZ_STORE VALUES(12, "MENS BOTTOMS", 200, "jeans, pants, shorts, pajamas", 35, "SMALL_XLARGE");
+INSERT INTO LIZ_STORE VALUES(13, "MENS TOPS", 300, "buttonups, shirts, t_shirts, tanks", 30, "SMALL_XXLARGE");
+INSERT INTO LIZ_STORE VALUES(14, "WOMENS FOOTWEAR", 300, "slippers, sandals, wedges", 45, "per request");
+INSERT INTO LIZ_STORE VALUES(15, "MENS FOOTWEAR", 100, "sandals, slippers, tennis shoes, boots", 45,"per request");
+
+SELECT * FROM LIZ_STORE; 
+
+--what items from the store do we have more than 50?
+SELECT * FROM LIZ_STORE where price <50 order by quantity;
+
+--how many total items do we have in the store?
+select sum(quantity) from LIZ_STORE;
+
+--what is the total price of all items in the store?
+select sum(price) from LIZ_STORE;
+
+--what items from the store have more than 65 total and arrange by the highest price? 
+SELECT * FROM LIZ_STORE WHERE QUANTITY >65 ORDER BY PRICE;
